@@ -5,10 +5,10 @@ const cors = require('cors')
 
 
 app.use(cors())
-const RouterTelefone = require('./routes/tels')
+const RouterUser = require('./routes/User')
 app.use(express.json())
 
-app.use('/telefone', RouterTelefone )
+app.use('/user', RouterUser)
 
 
 db.sequelize.sync().then(() =>{

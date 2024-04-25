@@ -38,7 +38,7 @@ Router.post('/auth', async (req,res) =>{
 
     const accessToken = sign({username: user.username, id: user.id}, "Tokenimportant")
 
-    res.json({accessToken})
+    res.json({accessToken, user})
 
     
 })

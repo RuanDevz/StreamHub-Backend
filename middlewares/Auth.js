@@ -1,15 +1,21 @@
 const { verify } = require('jsonwebtoken');
 
 const Authmiddleware = (req, res, next) => {
-    const accessToken = req.headers.authorization.split(' ')[1];
+    const authHeader = req.headers.authorization;
 
-    verify(accessToken, "Tokenimportant", (err, user) => {
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ error: "Cabeçalho de autorização inválido ou ausente" });
+    }
+
+    const accessToken = authHeader.split(' ')[1];
+
+    verify(accessToken, process.env.JWT_SECRET, (err, user) => {
         if (err) {
-            return res.status(401).json({ error: "Token inválido" });
-        } else {
-            req.user = user; 
-            next();
+            return res.status(401).json({ error: "Token inválido ou expirado" });
         }
+
+        req.user = user;
+        next();
     });
 };
 

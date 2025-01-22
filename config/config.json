@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "Ruan1120#@",
-    "database": "loginapi",
+    "database": "StreamHub",
     "host": "localhost",
     "dialect": "postgres"
   },
@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "postgres.trstjjoowfmnbvrkflxs",
-    "password": "Pizzariabackend",
+    "password": "Proxxima2024!",
     "database": "postgres",
     "host": "aws-0-sa-east-1.pooler.supabase.com",
     "port":"5432" ,

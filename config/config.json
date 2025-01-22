@@ -1,24 +1,24 @@
 {
   "development": {
     "username": "postgres",
-    "password": "Ruan1120#@",
+    "password": "Ruan1120#@",  
     "database": "StreamHub",
     "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": null,  
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "postgres.qjkcelvzajykgpvseymq",
-    "password": "Proxxima2024!",
+    "username": "postgres.wlwrgpzljqwbgzgsnnsw",
+    "password": "Smart1120",  
     "database": "postgres",
-    "host": "aws-0-sa-east-1.pooler.supabase.com", 
-    "port":"6543" ,
+    "host": "aws-0-us-west-1.pooler.supabase.com",
+    "port": 6543,
     "dialect": "postgres"
   }
 }
